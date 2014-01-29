@@ -17,11 +17,18 @@ end
 
 helpers WordUtils
 
+helpers do
+  def h(text)
+    Rack::Utils.escape_html(text)
+  end
+end
+
 get '/' do
-  erb :main, locals: {text: 'woof! woof!'}
+  erb :main, locals: {dog: 'woof! woof!', speaking: false}
 end
 
 post '/' do
-  sayit = to_dogspeak(params[:sayit])
-  erb :main, locals: {text: "rooof! #{sayit}"}
+  human = params[:sayit]
+  dog = to_dogspeak(human)
+  erb :main, locals: {dog: "rooof! #{dog}", speaking: true, human: human}
 end

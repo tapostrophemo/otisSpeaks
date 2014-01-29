@@ -1,0 +1,28 @@
+/* color scheme: http://colorschemedesigner.com/#0y61TgwqqQ1Gr */
+
+body {
+	background-color: #f1d8c0;
+	color: #582f07;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+h1 {
+	font-family: 'Comic Sans MS', cursive;
+	font-style: italic;
+}
+
+.main {
+	width: 450px;
+	margin: 110px auto 90px;
+	text-align: center;
+}
+
+a {
+	color: #582f07;
+}
+
+.footer {
+	text-align: center;
+	font-size: 11px;
+	color: #7b6856;
+}

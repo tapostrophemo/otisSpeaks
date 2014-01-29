@@ -3,15 +3,25 @@
 	<head>
 		<meta charset="utf-8">
 		<title>otis...he speakz</title>
-		<style>
-		</style>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 	</head>
 	<body>
-		<h1><%= text %></h1>
-		<form method="POST">
-			<textarea name="sayit" rows="3" cols="20"></textarea>
-			<br>
-			<input type="submit" value="Otis, say it!">
-		</form>
+		<div class="main">
+			<h2>otis...he speakz</h2>
+			<h1><%= dog %></h1>
+			<% if (speaking) %>
+				<p>(<%= h(human) %>)</p>
+				<img src="/images/speak.gif">
+				<p><a href="/">Ask Otis to say something else...</a></p>
+			<% else %>
+				<form method="POST">
+					<textarea name="sayit" rows="3" cols="20"></textarea>
+					<br>
+					<input type="submit" value="Otis, say it!">
+				</form>
+			<% end %>
+		</div>
+
+		<p class="footer"><%= to_dogspeak('Copyright (c) 2014, Dan Parks. All Rights Reserved.') %></p>
 	</body>
 </html>
